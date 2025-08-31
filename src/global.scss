@@ -19,11 +19,11 @@
 @import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+// @import "@ionic/angular/css/padding.css";
+// @import "@ionic/angular/css/float-elements.css";
+// @import "@ionic/angular/css/text-alignment.css";
+// @import "@ionic/angular/css/text-transformation.css";
+// @import "@ionic/angular/css/flex-utils.css";
 
 /**
  * Ionic Dark Mode
@@ -35,3 +35,100 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+  --color-verde-montoggio: #416d4d;
+  --color-verde-montoggio-scuro:#2d5b3f;
+  --color-beige-montoggio: #f9f4e7;
+  --color-blu-montoggio: #37474f;
+  --color-attivo: var(--color-verde);
+  --color-arancio:#d64d0d;
+  --ion-font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+// /* Stile generale del menu */
+// ion-menu {
+//   background-color: var(--color-verde);
+//   width: 240px;
+//   border-right: 1px solid #ddd;
+// }
+
+// /* Header del menu */
+// ion-list-header {
+//   font-size: 1.2rem;
+//   font-weight: bold;
+//   color: white;
+//   background-color: var(--color-verde);
+//   padding: 12px;
+//   border-radius: 8px;
+//   margin-bottom: 0.5rem;
+// }
+
+// /* Info email */
+// ion-note {
+//   font-size: 0.9rem;
+//   color: var(--color-blu);
+//   margin: 0.5rem 0 1rem 0;
+//   padding-left: 8px;
+// }
+
+// /* Lista elementi del menu */
+// ion-item {
+//   --color: var(--color-blu);
+//   font-size: 1rem;
+//   padding: 10px 8px;
+//   border-radius: 6px;
+//   background-color: var(--color-verde);
+//   transition: background-color 0.3s ease;
+// }
+
+// /* Icone */
+// ion-icon {
+//   font-size: 22px;
+//   color: var(--color-blu);
+// }
+
+// /* Quando un menu è attivo */
+// ion-item.selected {
+//   background-color: var(--color-attivo);
+//   --color: white;
+// }
+
+// ion-item.selected ion-icon {
+//   color: white;
+// }
+// /* ==== Area contenuto centrale === */
+// .contenuto {
+//   flex: 1;
+//   padding: 2rem;
+//   background-color: white;
+//   overflow-y: auto;
+// }
+
+// .contenuto h1 {
+//   font-size: 1.8rem;
+//   margin-bottom: 1rem;
+//   color: var(--color-blu);
+// }
+
+// /* ==== Cards delle notizie === */
+// ion-card {
+//   border-radius: 12px;
+//   padding: 1rem;
+//   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+//   margin-bottom: 1rem;
+//   color: var(--color-beige);
+// }
+
+// ion-card.verde {
+//   background-color: var(--color-verde);
+// }
+
+// ion-card.arancio {
+//   background-color: var(--color-arancio);
+// }
+
+// ion-card.beige {
+//   background-color: var(--color-beige);
+//   color: var(--color-blu);
+// }

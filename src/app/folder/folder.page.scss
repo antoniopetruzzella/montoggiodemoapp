@@ -4,11 +4,12 @@ ion-menu-button {
 
 #container {
   text-align: center;
-  position: absolute;
+  //position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top:  50%;
+  //transform: translateY(-50%);
+  //padding-top: 100px;
 }
 
 #container strong {
@@ -26,3 +27,63 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+ion-card.arancione {
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  color: var(--color-beige);
+  --background: #d64d0d;
+}
+
+ion-content{
+    --overflow: auto;
+}
+
+
+/* Ora, stiliamo i componenti interni alla ion-card.arancione */
+
+/* 1. ion-card-header e ion-card-content */
+/* Spesso sono già trasparenti o si adattano, ma puoi impostarli esplicitamente */
+ion-card.arancione ion-card-header,
+ion-card.arancione ion-card-content {
+  background: transparent; /* Assicura che siano trasparenti */
+  /* Potresti voler cambiare il colore del testo per il titolo/sottotitolo */
+  color: var(--color-beige); /* O il colore che vuoi per il testo sulla card arancione */
+}
+
+/* 2. ion-list (il contenitore degli item) */
+ion-card.arancione ion-list {
+  background: transparent !important; /* DECISIVO !IMPORTANT Rende la lista trasparente, così si vede il background della card */
+  /* Potresti voler rimuovere il padding predefinito della lista se interferisce */
+  padding: 0;
+}
+
+/* 3. ion-item (il colpevole principale per il background bianco) */
+ion-card.arancione ion-item {
+  --background: transparent; /* QUESTO È FONDAMENTALE per far vedere il background della card */
+  --background-hover: transparent; /* Per l'effetto hover */
+  --background-activated: transparent; /* Per l'effetto click/tap */
+  --background-focused: transparent; /* Per lo stato di focus */
+  /* Se il tuo testo all'interno di ion-item è ancora bianco o poco visibile, impostalo qui */
+  --color: var(--color-beige); /* Colore del testo predefinito per ion-item */
+}
+
+/* 4. ion-label, ion-icon (per il testo e le icone dentro ion-item) */
+/* A volte il colore del testo e delle icone deve essere impostato separatamente per la leggibilità */
+ion-card.arancione ion-item ion-label h3{
+  color: var(--color-verde-montoggio-scuro); /* Colore del testo dentro le label */
+}
+ion-card.arancione ion-item ion-label p {
+  color: black !important; /* Colore del testo dentro le label */
+}
+
+ion-card.arancione ion-item ion-icon {
+  color: var(--color-beige); /* Colore delle icone */
+}
+
+
+ion-card.verde {
+  background-color: var(--color-verde);
+}
+

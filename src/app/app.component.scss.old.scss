@@ -82,7 +82,6 @@ ion-menu.ios ion-item {
   --padding-start: 16px;
   --padding-end: 16px;
   --min-height: 50px;
-  --background: var(--color-verde-montoggio)
 }
 
 ion-menu.ios ion-item.selected ion-icon {
@@ -107,27 +106,6 @@ ion-menu.ios ion-note {
 ion-menu.ios ion-note {
   margin-bottom: 8px;
 }
-
-ion-menu.ios ion-list#inbox-list {
-  color: white;
-  background: var(--color-verde-montoggio);
-  border-radius: 6px;
-  padding: 10px 12px;
-   
-}
-
-ion-menu.ios ion-list#inbox-list ion-list-header {
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
-  min-height: 20px;
-}
-
-ion-menu.ios ion-item.selected {
-  --background: var(--color-verde-montoggio-scuro);
-}
-
-
 
 ion-note {
   display: inline-block;

@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss'],
+  standalone: false,
+})
+export class AppComponent {
+  public appPages = [
+    { title: 'Home', url: '/folder/home', icon: 'home' },
+    { title: 'Comune', url: '/folder/comune', icon: 'compass' },
+    { title: 'Salute', url: '/folder/salute', icon: 'medkit' },
+    { title: 'Volontariato', url: '/folder/volontariato', icon: 'heart' },
+    { title: 'Eventi', url: '/folder/eventi', icon: 'archive' },
+    { title: 'Bacheca giovani', url: '/folder/bacheca', icon: 'bulb' },
+    { title: 'Promo', url: '/folder/promo', icon: 'cart' },
+  ];
+  //https://ionic.io/ionicons
+  //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  constructor() {}
+}
