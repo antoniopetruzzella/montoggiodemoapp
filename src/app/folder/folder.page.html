@@ -13,8 +13,22 @@
       <ion-title size="small">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header> -->
-
-  <div id="container">
+<ng-container *ngIf="folder === 'home'; else dynamicContent">
+  <!-- ✅ Contenuto statico per la home -->
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Questa è la tua pagina iniziale. Scegli una sezione dal menu o dai pulsanti qui sotto.</p>
+        <ion-button routerLink="/folder/salute">Sezione 1</ion-button>
+        <ion-button routerLink="/folder/eventi">Sezione 2</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ng-container>
+  <div id="container" #dynamiccontent>
   
     
     <ion-card class="arancione" *ngFor="let item of contenuto">
@@ -42,22 +56,22 @@
         </ion-item>
 
         <!-- Modale con immagine ingrandita -->
-<ion-modal [isOpen]="modalVisibile" (didDismiss)="modalVisibile = false">
-  <ng-template>
-    <ion-content class="modal-content">
-      <ion-toolbar>
-        <ion-buttons slot="end">
-          <ion-button (click)="modalVisibile = false">
-            <ion-icon name="close-outline"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <div class="modal-image-wrapper">
-        <img [src]="imgSelezionata" class="zoomed-image" />
-      </div>
-    </ion-content>
-  </ng-template>
-</ion-modal>
+        <ion-modal [isOpen]="modalVisibile" (didDismiss)="modalVisibile = false">
+          <ng-template>
+            <ion-content class="modal-content">
+              <ion-toolbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modalVisibile = false">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+              <div class="modal-image-wrapper">
+                <img [src]="imgSelezionata" class="zoomed-image" />
+              </div>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
 
       </ion-list>
     </ion-card-content>
@@ -68,5 +82,12 @@
 
 
   </div>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/folder/home" expand="block">
+        🏠 Torna alla Home
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-content>
 

@@ -13,7 +13,7 @@ import { DataService } from '../services/data.service';
 export class FolderPage implements OnInit {
   public folder!: string;
   private activatedRoute = inject(ActivatedRoute);
-  
+  public dynamicContent:any
   public contenuto: any
   public campi_da_escludere=["progr"];//QUESTO E' L'ARRAY DEI CAMPI CHE ARRIVANO DAL DB MA CHE NON VANNO RAPPRESENTATI
   constructor(private dataService: DataService) {}

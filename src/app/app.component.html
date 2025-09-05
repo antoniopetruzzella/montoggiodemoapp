@@ -1,6 +1,7 @@
 <ion-app>
   <ion-split-pane when="false" contentId="main-content"><!--ATTENZIONE A NON TOGLIERE MAI when=false se no a schermo intero parte male-->
-    <ion-menu contentId="main-content" type="overlay">
+    
+    <ion-menu contentId="main-content" type="overlay" [disabled]="true">
       <ion-content>
         <ion-list id="inbox-list" >
           <ion-list-header>Progetto Montoggio</ion-list-header>
