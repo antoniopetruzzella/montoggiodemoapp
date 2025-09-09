@@ -13,17 +13,98 @@
       <ion-title size="small">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header> -->
+  
 <ng-container *ngIf="folder === 'home'; else dynamicContent">
   <!-- ✅ Contenuto statico per la home -->
   <ion-content>
-    <ion-card>
-      <ion-card-header>
+    <ion-card class="ion-card_home">
+      <!--<ion-card-header>
         <ion-card-title>Benvenuto nella Home</ion-card-title>
-      </ion-card-header>
+      </ion-card-header>-->
       <ion-card-content>
-        <p>Questa è la tua pagina iniziale. Scegli una sezione dal menu o dai pulsanti qui sotto.</p>
-        <ion-button routerLink="/folder/salute">Sezione 1</ion-button>
-        <ion-button routerLink="/folder/eventi">Sezione 2</ion-button>
+        <ion-button class="home_page_icon-button" routerLink="/folder/comune" expand="block" fill="clear" >
+          <ion-img class="home_page_icon-img" src="assets/menu_icons/bacheca_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title">BACHECA DEL COMUNE</div>
+            <div class="subtitle">Notizie e comunicati</div>
+          </div>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="ion-card_home">
+      <!--<ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>-->
+      <ion-card-content>
+        <ion-button class="home_page_icon-button" routerLink="/folder/eventi" expand="block" fill="clear" >
+          <ion-img class="home_page_icon-img" src="assets/menu_icons/eventi_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title">EVENTI E INIZIATIVE</div>
+            <div class="subtitle">Calendario degli eventi</div>
+          </div>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+ <ion-card class="ion-card_home">
+      <!--<ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>-->
+      <ion-card-content>
+        <ion-button class="home_page_icon-button" routerLink="/folder/volontariato" expand="block" fill="clear" >
+          <ion-img class="home_page_icon-img" src="assets/menu_icons/volontariato_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title">VOLONTARIATO</div>
+            <div class="subtitle">Offerte e richieste di aiuto</div>
+          </div>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+<ion-card class="ion-card_home">
+      <!--<ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>-->
+      <ion-card-content >
+        <ion-button class="home_page_icon-button" routerLink="/folder/giovani" expand="block" fill="clear" >
+          <ion-img class="home_page_icon-img" src="assets/menu_icons/giovani_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title">GIOVANI</div>
+            <div class="subtitle">Iniziative giovanili locali</div>
+          </div>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+<ion-card class="ion-card_home">
+      <!--<ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>-->
+      <ion-card-content>
+        <ion-button class="home_page_icon-button" routerLink="/folder/salute" expand="block" fill="clear" >
+          <ion-img class="home_page_icon-img" src="assets/menu_icons/salute_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title">SALUTE E BENESSERE</div>
+            <div class="subtitle">Informazioni su salute e servizi</div>
+          </div>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+
+<ion-card class="ion-card_home">
+      <!--<ion-card-header>
+        <ion-card-title>Benvenuto nella Home</ion-card-title>
+      </ion-card-header>-->
+      <ion-card-content>
+        <ion-button class="home_page_icon-button promo-center" routerLink="/folder/promo" expand="block" fill="clear" >
+          <ion-img class="home_page_promo_icon-img" src="assets/menu_icons/promo_256.webp" ></ion-img>
+          <div class="home_page_icon-text">
+            <div class="title"></div>
+            <div class="subtitle"></div>
+          </div>
+        </ion-button>
       </ion-card-content>
     </ion-card>
   </ion-content>
