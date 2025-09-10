@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>{{ folder === 'home' ? 'CO-APP MONTOGGIO' : folder }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -112,7 +112,7 @@
   <div id="container" #dynamiccontent>
   
     
-    <ion-card class="arancione" *ngFor="let item of contenuto">
+    <ion-card [ngClass]="folder" *ngFor="let item of contenuto">
 
     <ion-card-header >
       <ion-card-title>{{ item.id }}</ion-card-title>
