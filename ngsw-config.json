@@ -31,7 +31,7 @@
     {
       "name": "api-cache",
       "urls": [
-        "https://montoggioget-853615419170.europe-west1.run.app"
+        "https://montoggioget-565624036400.europe-west1.run.app"
       ],
       "cacheConfig": {
         "strategy": "performance",
@@ -43,7 +43,8 @@
     {
       "name": "cloud-storage-images",
       "urls": [
-        "https://storage.googleapis.com/montoggio/immagini/" 
+        "https://storage.googleapis.com/co-app-montoggio-bkt/immagini/**" 
+        
       ],
       "cacheConfig": {
         "strategy": "performance",
