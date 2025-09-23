@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "CO-APP MONTOGGIO",
+  "short_name": "CO-APP MONTOGGIO",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
