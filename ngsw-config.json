@@ -39,18 +39,7 @@
         "maxAge": "1d",
         "timeout": "5s"
       }
-    },
-    {
-      "name": "cloud-storage-images",
-      "urls": [
-        "https://storage.googleapis.com/co-app-montoggio-bkt/immagini/**" 
-        
-      ],
-      "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 100,
-        "maxAge": "30d"
-      }
     }
+  
   ]
 }

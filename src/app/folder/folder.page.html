@@ -130,7 +130,7 @@
             <ng-template #cardNormale>
             <ion-label >
               <h3>{{ dato.chiave }}</h3>
-              <p>{{ dato.valore }}</p>
+              <p [innerHTML]="dato.valore"></p>
             </ion-label >
             </ng-template>
           </ng-container>
