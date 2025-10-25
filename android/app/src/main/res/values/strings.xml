@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">co-app-montoggio</string>
+    <string name="title_activity_main">co-app-montoggio</string>
+    <string name="package_name">com.coappmontoggio.app</string>
+    <string name="custom_url_scheme">com.coappmontoggio.app</string>
+</resources>

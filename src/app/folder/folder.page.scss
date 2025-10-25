@@ -13,6 +13,12 @@ ion-title{
   text-align: center;
 }
 
+ion-card-title{
+  font-weight: bold;
+  font-size: 25px;
+  //color: var(--color-beige);
+}
+
 #container {
   text-align: center;
   //position: absolute;
@@ -29,7 +35,7 @@ ion-title{
 }
 
 #container p {
-  font-size: 16px;
+  //font-size: 16px;
   line-height: 22px;
   color: #8c8c8c;
   margin: 0;
@@ -92,11 +98,66 @@ ion-card ion-item {
 
 /* 4. ion-label, ion-icon (per il testo e le icone dentro ion-item) */
 /* A volte il colore del testo e delle icone deve essere impostato separatamente per la leggibilità */
-ion-card ion-item ion-label h3{
-  color: var(--color-verde-montoggio-scuro); /* Colore del testo dentro le label */
+ion-card ion-item ion-label .datovalore{
+  //color: var(--color-verde-montoggio-scuro); /* Colore del testo dentro le label */
+  font-size: 24px !important
 }
-ion-card ion-item ion-label p {
+
+
+
+:host ::ng-deep .datovalore * { //!!!!!!!!!!!!!!!!!!!! SOLO QUESTO PERMETTE LA PROPAGAZIONE DELLO STILE AI FIGLI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  font-size: 24px !important;
+}
+
+:host ::ng-deep .datovalore h1 {
+  font-size: 30px !important;
+}
+
+:host ::ng-deep .datovalore h1 * {
+  font-size: 30px !important;
+}
+
+:host ::ng-deep .datovalore h2 {
+  font-size: 28px !important;
+}
+
+:host ::ng-deep .datovalore h2 * {
+  font-size: 28px !important;
+}
+
+:host ::ng-deep .datovalore h4 {
+  font-size: 22px !important;
+}
+
+:host ::ng-deep .datovalore h4 * {
+  font-size: 22px !important;
+}
+
+:host ::ng-deep .datovalore h5 {
+  font-size: 20px !important;
+}
+
+:host ::ng-deep .datovalore h5 *{
+  font-size: 20px !important;
+}
+
+:host ::ng-deep .datovalore h6 {
+  font-size: 18px !important;
+}
+
+:host ::ng-deep .datovalore h6 *{
+  font-size: 18px !important;
+}
+
+
+
+
+
+
+
+ion-card ion-item ion-label p {//DI FATTO IL TITOLO!!!
   color: black !important; /* Colore del testo dentro le label */
+  font-size: 24px;
 }
 
 ion-card ion-item ion-icon {

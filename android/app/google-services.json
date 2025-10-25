@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "565624036400",
+    "project_id": "co-app-montoggio",
+    "storage_bucket": "co-app-montoggio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565624036400:android:e9fb2e4defac4b8628e1f5",
+        "android_client_info": {
+          "package_name": "com.coappmontoggio.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmr5Wxnx47opHEu6cpS42EPCV4xEWBhZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
