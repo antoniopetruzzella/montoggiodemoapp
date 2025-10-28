@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
 import { PushNotifications } from '@capacitor/push-notifications';
 import { Capacitor } from '@capacitor/core';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { environment } from 'src/environments/environment';
+import { firebaseConfig } from 'src/environments/firebase-config';
 
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
 @Injectable({
   providedIn: 'root'
 })
 export class PushService {
 
   initialize() {
-
+    console.log('PushService.initialize() chiamato');
+    console.log('Platform:', Capacitor.getPlatform());
     if (Capacitor.getPlatform() === 'android' || Capacitor.getPlatform() === 'ios') {
     // 1. Richiesta permessi
     PushNotifications.requestPermissions().then(permission => {
@@ -44,4 +51,31 @@ export class PushService {
     });
   }
 }
+
+private async salvaTokenSuFirestore(token: string) {
+  try {
+    const firebaseConfig = {
+      apiKey: '...',
+      authDomain: '...',
+      projectId: '...',
+      messagingSenderId: '...',
+      appId: '...'
+    };
+
+    const firebaseApp = initializeApp(firebaseConfig);
+    const db = getFirestore(firebaseApp);
+
+    const tokenId = token; // Puoi usare il token come ID documento
+    await setDoc(doc(db, 'tokens', tokenId), {
+      token,
+      updatedAt: new Date().toISOString(),
+      platform: Capacitor.getPlatform()
+    });
+
+    console.log('Token salvato su Firestore');
+  } catch (err) {
+    console.error('Errore salvataggio token:', err);
+  }
+}
+
 }

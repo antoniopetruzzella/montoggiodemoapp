@@ -60,6 +60,7 @@ ion-card-content{
   padding-inline-start: 0;
   padding-top: 0;
   padding-bottom: 0;
+  padding: 0.25rem 0 !important;
   
 }
 
@@ -150,6 +151,10 @@ ion-card ion-item ion-label .datovalore{
 }
 
 
+ion-card.ion-card_home {
+  padding: 0.5rem; /* meno spazio interno */
+  margin-top: 7px !important; /* meno spazio tra le card */
+}
 
 
 
@@ -206,6 +211,8 @@ ion-card.giovani{
   align-items: center;
   justify-content: flex-start;
   text-align: left;
+  padding: 0.25rem 0;
+  min-height: auto;
 }
 
 .home_page_icon-content {
@@ -217,10 +224,13 @@ ion-card.giovani{
 }
 
 .home_page_icon-img {
-  width: 96px;
-  height: 96px;
-  margin-right: 12px;
+  //width: 96px;
+  //height: 96px;
+  //margin-right: 12px;
   flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  margin-right: 8px;
 }
 
 .home_page_promo_icon-img{
