@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -16,7 +16,9 @@ export class FolderPage implements OnInit {
   public dynamicContent:any
   public contenuto: any
   public campi_da_escludere=["progr"];//QUESTO E' L'ARRAY DEI CAMPI CHE ARRIVANO DAL DB MA CHE NON VANNO RAPPRESENTATI
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    
+  }
   modalVisibile = false;
   imgSelezionata = '';
 
@@ -24,6 +26,10 @@ export class FolderPage implements OnInit {
   ngOnInit() {
     
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    console.log('Folder page for folder:', this.folder);
+
+
+    // Chiamata normale con HttpClient
     var section=this.folder
     if (section) {
       this.dataService.getContent(section).subscribe((res: any) => {
